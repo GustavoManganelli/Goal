@@ -1,0 +1,18 @@
+basePath: /api/v1
+host: localhost:8080
+info:
+  contact:
+    email: goal.projectapp@gmail.com
+  description: A spents management for small groups service API in Go using Gin framework.
+  termsOfService: https://tos.santoshk.dev
+  title: Money organization API
+  version: "1.0"
+paths:
+  /health:
+    get:
+      description: get api health status
+      responses:
+        "200":
+          description: OK
+      summary: Get api health
+swagger: "2.0"

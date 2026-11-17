@@ -1,0 +1,27 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "A spents management for small groups service API in Go using Gin framework.",
+        "title": "Money organization API",
+        "termsOfService": "https://tos.santoshk.dev",
+        "contact": {
+            "email": "goal.projectapp@gmail.com"
+        },
+        "version": "1.0"
+    },
+    "host": "localhost:8080",
+    "basePath": "/api/v1",
+    "paths": {
+        "/health": {
+            "get": {
+                "description": "get api health status",
+                "summary": "Get api health",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        }
+    }
+}
