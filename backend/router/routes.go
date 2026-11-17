@@ -7,24 +7,22 @@ import (
 	ginSwagger "github.com/swaggo/gin-swagger"
 )
 
-// @title Money organization API
+// @title           Goal API
 // @version         1.0
 // @description     A spents management for small groups service API in Go using Gin framework.
 // @termsOfService  https://tos.santoshk.dev
-
-// @contact.email  goal.projectapp@gmail.com
-
-// @host      localhost:8080
-// @BasePath  /api/v1
+// @contact.email   goal.projectapp@gmail.com
+// @host            localhost:8080
+// @BasePath        /api/v1
 func Initialize() {
 	r := gin.Default()
 
 	// Swagger route
 	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
-	v1 := r.Group("/api/v1")
+	health := r.Group("/api/v1/health")
 	{
-		v1.GET("/health", healthCheck)
+		health.GET("/health", healthCheck)
 	}
 
 	r.Run(":8080")
