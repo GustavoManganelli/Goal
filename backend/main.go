@@ -1,8 +1,11 @@
 package main
 
-import "example.com/goal/backend/routes"
+import (
+	"example.com/goal/backend/db"
+	"example.com/goal/backend/routes"
+)
 
 func main() {
-
-	routes.Initialize()
+	db.Connect()
+	router.Initialize()
 }
