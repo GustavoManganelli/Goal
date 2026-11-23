@@ -1,4 +1,20 @@
 # Environment files and local secrets
+# Go build and test artifacts
+/backend/bin/
+/backend/*.exe
+/backend/*.test
+/backend/*.out
+/backend/coverage.*
+
+# Frontend build and tool caches
+/frontend/goal/node_modules/
+/frontend/goal/dist/
+/frontend/goal/dist-ssr/
+/frontend/goal/coverage/
+/frontend/goal/.vite/
+/frontend/goal/*.tsbuildinfo
+
+# Local environment and secrets
 .env
 .env.*
 !.env.example
@@ -28,7 +44,16 @@ npm-debug.log*
 *~
 
 # Operating system files
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+
+# IDE and operating system files
+.idea/
 .DS_Store
 Thumbs.db
 Desktop.ini
 
+# Obsidian per-user workspace state
+/.obsidian/workspace.json
