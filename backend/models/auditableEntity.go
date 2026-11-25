@@ -1,12 +1,10 @@
 package models
 
-import (
-	"go.mongodb.org/mongo-driver/v2/bson"
-)
+import "github.com/jackc/pgx/v5/pgtype"
 
 type AuditableEntity struct {
-	createdBy string
-	createdAt bson.DateTime
-	updatedBy *string
-	updatedAt *bson.DateTime
+	CreatedBy string            `gorm:"size:150;not null"`
+	CreatedAt pgtype.Timestamp  `gorm:"not null"`
+	UpdatedBy *string           `gorm:"size:150"`
+	UpdatedAt *pgtype.Timestamp `gorm:"null"`
 }

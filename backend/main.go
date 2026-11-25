@@ -7,5 +7,6 @@ import (
 
 func main() {
 	db.Connect()
+	db.RunMigrations()
 	router.Initialize()
 }
