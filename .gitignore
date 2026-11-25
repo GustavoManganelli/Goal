@@ -1,3 +1,4 @@
+# Environment files and local secrets
 # Go build and test artifacts
 /backend/bin/
 /backend/*.exe
@@ -19,6 +20,30 @@
 !.env.example
 !.env.*.example
 
+# Frontend (TypeScript, Vite Plus, npm)
+node_modules/
+dist/
+dist-ssr/
+.vite/
+coverage/
+*.tsbuildinfo
+npm-debug.log*
+
+# Backend (Go)
+*.exe
+*.test
+*.out
+/backend/goal
+/backend/goal.exe
+
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Operating system files
 # Logs and temporary files
 *.log
 *.tmp
